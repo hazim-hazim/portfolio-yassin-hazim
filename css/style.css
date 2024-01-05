@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+:root{
+    --first-color:#f1f2f3;
+    --second-color:#FF9A1B;
+    --bg-color-1:#636160;
+    --bg-color-2:#888484;
+    --light-color:#D3D3D3;
+    --padding:8%;
+    
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'poppins', sans-serif;
+    color: var(--first-color);
+    font-size: 17px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-color-1);
+    height: 3.5em;
+    align-items: center;
+    padding: 2rem var(--padding);
+    font-weight: 600;
+    letter-spacing: 1px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+     
+}
+
+h3{
+    text-transform:uppercase;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+ul li{
+    margin-left: 2rem;
+    
+    
+}
+
+ul li a:hover{
+    color: var(--second-color)
+}
+
+ul li a{
+    text-decoration: none;
+    color: var(--first-color);
+    text-transform: capitalize;
+    transition: 0.7s;
+}
+
+span{
+    color: var(--second-color);
+}
+.home{
+    background-color: var(--bg-color-1);
+    height: 100vh;
+    padding: 0 var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+img{
+    width: 100%;
+}
+.image{
+    width: 35%;
+}
+h1{
+    font-size: 4rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+h4{
+    font-size: 1.25;
+}
+.title2{
+    margin: 1.7rem 0;
+}
+.title3{
+    margin: 3rem 0;
+}
+.social{
+    margin-top: 3rem;
+}
+.btn{
+    background-color: var(--second-color);
+    border-radius: 30px;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: var(--first-color);
+    font-weight: 500;
+    border: 2px solid transparent;
+    transition:0.8s;
+}
+.btn:hover{
+    background-color: transparent;
+    border: 2px solid var(--second-color);
+    
+}
+.social a i{
+    color: var(--second-color);
+    font-size: 1.5rem;
+    border:1px solid var(--light-color);
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 1rem;
+    transition: 0.8s;
+}
+.social a i:hover{
+    color: var(--second-color);
+    border:1px solid var(--second-color);
+    transform: scale(1.5);
+}
+.about{
+    background-color: var(--bg-color-2);
+    padding: 2rem var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+.about .image, .about .text{
+    width: 35%;
+}
+p{
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    line-height: 2.8rem;
+}
+h5{
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+.services{
+    background-color: var(--bg-color-1);
+    padding: 2rem var(--padding);
+    
+}
+.services h1{
+    text-align: center;
+}
+.box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.services .card{
+    width: 300px;
+    background-color: var(--bg-color-2);
+    border-radius: 20px;
+    padding: 1.3rem 2rem;
+    text-align: center;
+}
+.services .card i{
+    color: var(--second-color);
+    font-size: 3.12rem;
+    margin-bottom: 1rem;
+}
+.services p{
+    font-size: 1rem;
+    font-style: italic;
+}
+.projects{
+    background-color: var(--bg-color-2);
+    padding: 2rem var(--padding);
+    
+}
+.projects h1{
+    text-align: center;
+}
+.projects .card{
+    background-color: var(--bg-color-1);
+    width: 300px;
+    border-radius: 20px;
+    padding: 1.3rem 2rem;
+}
+.projects img{
+    border-radius: 5px;
+    
+}
+.projects .card-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.projects i{
+    font-size: 1.4rem;
+    color: var(--second-color);
+}
+footer{
+    background-color: var(--bg-color-2);
+    padding: 2rem var(--padding);
+    text-align: center;
+
+}
+footer p{
+    font-style: italic;
+    font-size:1rem;
+}
+.menu{
+    display: none;
+}
+@media screen and (max-width:575px){
+    :root{
+        --padding: 1.5rem;
+    }
+    ul{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        font-size: 1.5rem;
+    }
+    html{
+        font-size: 12px;
+    }
+    .home .image{
+        display: none;
+    }
+    .about{
+        flex-wrap: wrap-reverse;
+        justify-content: center
+    }
+    .about .text{
+        width: 80%;
+    }
+    .box{
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-gap: 1rem;
+    }
+    .services .box .card{
+        width: 400px;
+        
+    }
+    .projects .box .card{
+        width: 400px;
+    }
+    .projects .box .card i{
+        
+        font-size: 1.5rem;
+    }
+    .projects .box {
+        grid-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:991px){
+    :root{
+        --padding: 4.5rem;
+    }
+    ul{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        font-size: 1.5rem;
+    }
+    html{
+        font-size: 12px;
+    }
+    .home .image{
+        display: none;
+    }
+    .about{
+        flex-wrap: wrap-reverse;
+        justify-content: center
+    }
+    .about .text{
+        width: 80%;
+    }
+    .box{
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-gap: 1rem;
+    }
+    .services .box .card{
+        width: 400px;
+        
+    }
+    .projects .box .card{
+        width: 400px;
+    }
+    .projects .box .card i{
+        
+        font-size: 1.5rem;
+    }
+    .projects .box {
+        grid-gap: 1.5rem;
+    }
+}
+
+@media screen and (min-width:990px) and (max-width:1275px){
+    :root{
+        --padding: 4.5rem;
+    }
+    ul{
+        display: none;
+    }
+    .menu{
+        display: flex;
+        font-size: 1.5rem;
+    }
+    html{
+        font-size: 12px;
+    }
+    .home .image{
+/*        display: none;*/
+    }
+    .about{
+        flex-wrap: wrap-reverse;
+        justify-content: center
+    }
+    .about .text{
+        width: 80%;
+    }
+    .box{
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-gap: 1rem;
+    }
+    .services .box .card{
+        width: 400px;
+        
+    }
+    .projects .box .card{
+        width: 400px;
+    }
+    .projects .box .card i{
+        
+        font-size: 1.5rem;
+    }
+    .projects .box {
+        grid-gap: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
